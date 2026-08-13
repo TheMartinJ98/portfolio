@@ -1,0 +1,50 @@
+:root {
+  --color-bg: #f6f5f2;
+  --color-card: #fffefb;
+  --color-text: #191b1e;
+  --color-text-secondary: #4c5158;
+  --color-text-tertiary: #7a7f87;
+  --color-border: #dedad3;
+  --color-accent: #0e5794;
+  --color-accent-hover: #003b75;
+
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --content-max-width: 1120px;
+  --page-padding: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+  letter-spacing: -0.025em;
+  line-height: 1.13;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
