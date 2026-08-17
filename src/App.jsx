@@ -9,14 +9,13 @@ function App() {
     <>
         <BrowserRouter>
             <Header />
-            <Routes>
-                {routes.map((route) => (
-                    <Route key={route.path} path={route.path} element={<route.element />} />
-                ))}
-            </Routes>
-              <main>
-                <p style={{ padding: 48 }}>Obsah stránok príde neskôr.</p>
-              </main>
+            <main>
+                <Routes>
+                    {routes.map((route) => (
+                        <Route key={route.path} path={route.path} element={<route.element />} />
+                    ))}
+                </Routes>
+            </main>
             <Footer />
         </BrowserRouter>
     </>

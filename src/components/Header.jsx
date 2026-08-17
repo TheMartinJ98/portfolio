@@ -5,7 +5,7 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <div className="logo">Meno Priezvisko</div>
+      <div className="logo">Ing. Martin Jevin</div>
       <nav className="nav">
           {routes.map((route) => (
               <Link key={route.path} to={route.path}>{route.label}</Link>
