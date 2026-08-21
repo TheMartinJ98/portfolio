@@ -7,7 +7,7 @@ import { routes } from './Routes.jsx'
 function App() {
   return (
     <>
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
             <Header />
             <main>
                 <Routes>
