@@ -27,3 +27,11 @@
 .timeline-entry p {
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 0;
+  }
+}

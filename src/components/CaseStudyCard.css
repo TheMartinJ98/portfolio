@@ -4,3 +4,9 @@
     padding: 20px;
     margin-bottom: 34px;
 }
+
+@media (max-width: 600px) {
+    .case-study {
+        padding: 16px;
+    }
+}

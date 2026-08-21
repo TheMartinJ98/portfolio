@@ -94,3 +94,24 @@ a {
   color: var(--color-text);
   border: 1px solid #cec9c1;
 }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 48px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
