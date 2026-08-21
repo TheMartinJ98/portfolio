@@ -1,25 +1,7 @@
-import { useState } from 'react'
 import TimelineEntry from '../components/TimelineEntry.jsx'
 import './OMne.css'
 
-const PHOTO_STORAGE_KEY = 'omne-photo'
-
 function OMne() {
-  const [photoUrl, setPhotoUrl] = useState(() => localStorage.getItem(PHOTO_STORAGE_KEY))
-
-  function handlePhotoChange(event) {
-    const file = event.target.files[0]
-    if (!file) return
-
-    const reader = new FileReader()
-    reader.onload = () => {
-      const dataUrl = reader.result
-      setPhotoUrl(dataUrl)
-      localStorage.setItem(PHOTO_STORAGE_KEY, dataUrl)
-    }
-    reader.readAsDataURL(file)
-  }
-
   const experiences = [
     { date: '02/2023 - 07/2026', place: 'TechFides', title: 'Funkčný analytik', text: 'Analýza a návrh nových modulov informačného systému, vrátane modelovania procesov, definovania používateľských scenárov a validácie požiadaviek s klientom. Súčasťou práce bola aj tvorba UML diagramov a prototypov s využitím AI, ako aj priama komunikácia s klientom počas celého životného cyklu projektu.' },
     { date: '08/2023 - 12/2023', place: 'TechFides', title: 'QA Tester', text: 'Hlavnou náplňou práce bolo manuálne testovanie, testovanie API, reportovanie nájdených chýb a spisovanie testovacích scenárov.' },
@@ -39,23 +21,9 @@ function OMne() {
             <p className="eyebrow">O mne</p>
             <h1>Analytik s chuťou rozvíjať sa.</h1>
           </div>
-          <label className="avatar-placeholder" htmlFor="photo-upload">
-            {photoUrl ? (
-              <img src={photoUrl} alt="Fotka" className="avatar-image" />
-            ) : (
-              <div className="avatar-placeholder-inner">
-                <p>Fotka</p>
-                <p>or browse files</p>
-              </div>
-            )}
-          </label>
-          <input
-            id="photo-upload"
-            type="file"
-            accept="image/*"
-            onChange={handlePhotoChange}
-            style={{ display: 'none' }}
-          />
+          <div className="avatar-placeholder">
+            <img src="/martin-jevin.jpg" alt="Martin Jevin" className="avatar-image" />
+          </div>
         </div>
       </section>
 
