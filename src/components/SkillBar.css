@@ -1,0 +1,22 @@
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 48px
+}
+
+.skill-row{
+    display: flex;
+    font-family: var(--font-mono);
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.skill-track {
+    height: 2px;
+    background: var(--color-border);
+}
+
+.skill-fill {
+    height: 2px;
+    background: var(--color-accent);
+}

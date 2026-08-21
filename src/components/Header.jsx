@@ -10,7 +10,6 @@ function Header() {
           {routes.map((route) => (
               <Link key={route.path} to={route.path}>{route.label}</Link>
           ))}
-        <button className="button" type="button"> sk/en </button>
       </nav>
     </header>
   )

@@ -1,0 +1,6 @@
+.case-study{
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    padding: 20px;
+    margin-bottom: 34px;
+}

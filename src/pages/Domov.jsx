@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import "./Domov.css"
+import SkillBar from "../components/SkillBar.jsx";
 
 function Domov() {
 
@@ -15,30 +16,29 @@ function Domov() {
       text: 'Návrh sociálnej siete umožňujúcej nahrávanie článkov a videí, s možnosťou zakúpenia členstva a vstupeniek na podujatia priamo na platforme. Na projekte som pôsobil aj v role QA.',
     },
     {
-      tag: '03 / IS pre športové centrá/ Ana + QA',
+      tag: '03 / IS pre športové centrá / Ana. + QA',
       title: 'Informačný systém pre športové centrum',
       text: 'Spolupráca s klientom na aktualizácii a vylepšení existujúceho systému vrátane integrácie so službami tretích strán.',
     },
   ]
 
   const skills = [
-    { name: 'Zber a analýza požiadaviek', level: 'Pokročilý', percent: 88 },
-    { name: 'BPMN 2.0', level: 'Pokročilý', percent: 85 },
+    { name: 'Zber a analýza požiadaviek', level: 'Pokročilý', percent: 85 },
     { name: 'Funkčné špecifikácie', level: 'Pokročilý', percent: 82 },
-    { name: 'UML', level: 'Stredný', percent: 65 },
-    { name: 'SQL', level: 'Stredný', percent: 60 },
-    { name: 'Jira / Confluence', level: 'Pokročilý', percent: 80 },
+    { name: 'Use Cases', level: 'Pokročilý', percent: 80 },
+    { name: 'UML', level: 'Pokročilý', percent: 78 },
+    { name: 'Práca s AI', level: 'Pokročilý', percent: 78 },
+    { name: 'Manuálne testovanie', level: 'Mierne pokročilý', percent: 72 },
   ]
 
   return (
       <>
         <section className="sections">
           <div className="content">
-            <p className="eyebrow"> Funkčný analytik / QA</p>
+            <p className="eyebrow">Funkčný analytik / QA</p>
             <h1>Prekladám potreby biznisu do špecifikácií, s ktorými vie vývoj pracovať.</h1>
-            <p>Mám 3,5 roka skúseností s biznis a funkčnou analýzou, ktoré dopĺňa certifikácia ECBA.</p>
             <div>
-              <a className="btn btn-primary" href="#"> Stiahnuť CV (PDF) </a>
+              <a className="btn btn-primary" href="/cv-martin-jevin.pdf" download> Stiahnuť CV (PDF) </a>
               <Link className="btn btn-secondary" to="/projekty">Pozrieť projekty</Link>
             </div>
           </div>
@@ -74,19 +74,11 @@ function Domov() {
 
         <section className="sections">
           <div className="content">
-            <p className="eyebrow">Moje schopnosti</p>
+            <p className="eyebrow">Vybrané schopnosti</p>
           </div>
           <div className="content skills-grid">
             {skills.map(skill => (
-                <div className="skill" key={skill.name}>
-                  <div className="skill-row">
-                    <span>{skill.name}</span>
-                    <span className="skill-level">{skill.level}</span>
-                  </div>
-                  <div className="skill-track">
-                    <div className="skill-fill" style={{ width: `${skill.percent}%` }}></div>
-                  </div>
-                </div>
+                <SkillBar key={skill.name} name={skill.name} level={skill.level} percent={skill.percent}></SkillBar>
             ))}
           </div>
         </section>
