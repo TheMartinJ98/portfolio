@@ -38,7 +38,7 @@ function Domov() {
             <p className="eyebrow">Funkčný analytik / QA</p>
             <h1>Prekladám potreby biznisu do špecifikácií, s ktorými vie vývoj pracovať.</h1>
             <div>
-              <a className="btn btn-primary" href="/cv-martin-jevin.pdf" download> Stiahnuť CV (PDF) </a>
+              <a className="btn btn-primary" href={`${import.meta.env.BASE_URL}cv-martin-jevin.pdf`} download> Stiahnuť CV (PDF) </a>
               <Link className="btn btn-secondary" to="/projekty">Pozrieť projekty</Link>
             </div>
           </div>

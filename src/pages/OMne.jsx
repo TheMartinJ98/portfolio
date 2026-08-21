@@ -22,7 +22,7 @@ function OMne() {
             <h1>Analytik s chuťou rozvíjať sa.</h1>
           </div>
           <div className="avatar-placeholder">
-            <img src="/martin-jevin.jpg" alt="Martin Jevin" className="avatar-image" />
+            <img src={`${import.meta.env.BASE_URL}martin-jevin.jpg`} alt="Martin Jevin" className="avatar-image" />
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@ function OMne() {
               <span className="eyebrow">Dostupnosť</span>
               <span>Full-time / freelance</span>
             </div>
-            <a className="btn btn-primary" href="/cv-martin-jevin.pdf" download>Stiahnuť CV (PDF)</a>
+            <a className="btn btn-primary" href={`${import.meta.env.BASE_URL}cv-martin-jevin.pdf`} download>Stiahnuť CV (PDF)</a>
           </div>
         </div>
       </section>
